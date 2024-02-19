@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:expandableTextView="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/img"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="15dp"
+            android:scaleType="centerCrop"
+            app:riv_corner_radius="70dp" />
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_weight="3"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:textColor="@color/blue"
+            android:textSize="16dp"
+            android:visibility="gone"/>
+
+
+        <ImageView
+            android:id="@+id/more"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginEnd="10dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ic_dots"
+            app:tint="@color/blue" />
+
+    </LinearLayout>
+
+    <!--    <androidx.recyclerview.widget.RecyclerView-->
+    <!--        android:id="@+id/post_list"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:orientation="horizontal"-->
+    <!--        android:overScrollMode="always"-->
+    <!--        android:scrollbars="none"-->
+    <!--        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"-->
+    <!--        tools:listitem="@layout/multipostlayout"/>-->
+
+    <RelativeLayout
+        android:id="@+id/layImage"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="300dp">
+        <ImageView
+            android:id="@+id/tv_post_image"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp" />
+
+        <RelativeLayout
+            android:id="@+id/tvViewPdf"
+            android:visibility="gone"
+            android:orientation="vertical"
+            android:background="#B5FFFFFF"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="25dp"
+                android:adjustViewBounds="true"
+                android:tint="@color/cpb_red"
+                android:src="@drawable/baseline_picture_as_pdf_24"/>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:layout_marginBottom="20dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:textSize="15sp"
+                    android:textAlignment="center"
+                    android:layout_height="wrap_content"
+                    android:text="Click To View Pdf"
+                    android:textColor="@color/cpb_red"/>
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/view_file"/>
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:textSize="22sp"
+                android:visibility="gone"
+                android:textAlignment="center"
+                android:layout_height="wrap_content"
+                android:text="View Pdf"
+                android:textColor="@color/cpb_red"/>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+    <com.ms.square.android.expandabletextview.ExpandableTextView
+        android:id="@+id/expand_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        expandableTextView:animDuration="100"
+        expandableTextView:maxCollapsedLines="4">
+
+        <!-- simple text view  -->
+        <TextView
+            android:id="@id/expandable_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <!-- expandable ImageButton -->
+        <ImageButton
+            android:id="@id/expand_collapse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|bottom"
+            android:background="@android:color/transparent" />
+
+    </com.ms.square.android.expandabletextview.ExpandableTextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp">
+
+        <ImageView
+            android:id="@+id/btnLiked"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ic_likeblue"/>
+
+
+        <ImageView
+            android:id="@+id/btnLike"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:adjustViewBounds="true"
+
+            android:src="@drawable/ic_likegray"/>
+
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/comment"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:adjustViewBounds="true"
+            android:layout_marginStart="40dp"
+            android:src="@drawable/comment" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvNoOfLike"
+            android:visibility="invisible"
+            android:layout_marginStart="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/black"
+            android:text="likes"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvNoOfComments"
+            android:visibility="invisible"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:text="Comments"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/gray" />
+
+</LinearLayout>

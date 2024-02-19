@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".Fragments.HomeFragment">
+
+
+    <RelativeLayout
+        android:id="@+id/actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="20dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/search"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="5dp"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/ic_search"
+            app:tint="@color/black"
+            android:contentDescription="@string/search"/>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_toStartOf="@+id/filter">
+
+            <ImageView
+                android:id="@+id/messanger"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/messenger"
+                android:padding="3dp"
+                android:contentDescription="@string/gotochat"/>
+
+            <TextView
+                android:id="@+id/icUnread"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="end"
+                android:layout_marginStart="17dp"
+                android:background="@drawable/ic_unread"
+                android:gravity="center"
+                android:text="@string/_0"
+                android:textColor="@color/white"
+                android:textSize="9sp"
+                android:visibility="gone" />
+
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/filter"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:padding="2dp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/filter"
+            android:contentDescription="@string/filter"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/etsearch_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/search_bg"
+        android:layout_margin="20dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/searchIcon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="10dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_search" />
+
+        <EditText
+            android:id="@+id/etSearch"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/search_bg"
+            android:hint="@string/search"
+            android:layout_toEndOf="@+id/searchIcon"
+            android:layout_toStartOf="@+id/close"
+            android:maxLines="1"
+            android:paddingHorizontal="15dp"
+            android:queryBackground="@drawable/search_bg"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray" />
+
+        <ImageView
+            android:id="@+id/close"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/close"
+            app:tint="@color/blue"
+            android:contentDescription="@string/close"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/no_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No more profiles to show.\n Please check back again."
+                android:textColor="@color/purple"
+                android:textSize="15dp" />
+
+        </LinearLayout>
+
+        <com.daprlabs.cardstack.SwipeFrameLayout xmlns:swipedeck="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/profile_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ProgressBar
+                android:id="@+id/progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+
+            <!--below widget is used for creating a swipe deck-->
+            <!--in below widget card spacing is the spacing between cards
+                max visible is the max number of cards which are visible
+                render above is to render the cards
+                rotation degree is the angle of card rotation when card is swiped-->
+            <com.daprlabs.cardstack.SwipeDeck
+                android:id="@+id/swipe_deck"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:padding="10dp"
+                swipedeck:card_spacing="10dp"
+                swipedeck:render_above="true"
+                swipedeck:rotation_degrees="15" />
+
+        </com.daprlabs.cardstack.SwipeFrameLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/previous"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/previous" />
+
+        <Button
+            android:id="@+id/dislike"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/gray"
+            android:text="Ignore" />
+
+        <Button
+            android:id="@+id/like"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:backgroundTint="#007AFF"
+            android:text="Invite"
+            tools:ignore="TextContrastCheck" />
+
+        <ImageView
+            android:id="@+id/next"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/nextbutton" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:id="@+id/linearlayout"
+    tools:context=".Activity.AlluserActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:textColor="@color/black"
+
+            android:layout_centerInParent="true"
+            android:textSize="20sp"
+            android:layout_height="wrap_content" android:text="No Conversation"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvAlluser"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:layout_margin="15dp"
+            android:foregroundGravity="center"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="3"
+            tools:listitem="@layout/alluser_layout" />
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_gravity="bottom">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/close"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="140dp"
+            android:background="@drawable/gradient_color"
+            android:gravity="center"
+            android:text="@string/close" />
+
+    </LinearLayout>
+
+</FrameLayout>

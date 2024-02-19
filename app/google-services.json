@@ -1,0 +1,86 @@
+{
+  "project_info": {
+    "project_number": "943138649397",
+    "project_id": "icofound-artha",
+    "storage_bucket": "icofound-artha.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:943138649397:android:ff8c2ceb27541e4de3087c",
+        "android_client_info": {
+          "package_name": "com.icofound"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "943138649397-ca1rqpphucuemujldj5n6ghj9v7vlusr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.icofound",
+            "certificate_hash": "5655ab1b31dd8d549a4662ea50f61f9b0ee122a3"
+          }
+        },
+        {
+          "client_id": "943138649397-cljcm8912ceue6k8a4n51m9ornqh4c5n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.icofound",
+            "certificate_hash": "7153aea5695e7ee2088b1ec3a9510cfe1ef7cebc"
+          }
+        },
+        {
+          "client_id": "943138649397-k9dcb0rq69e9ah47qsh4iec57d6fid9e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.icofound",
+            "certificate_hash": "ce9bd96ae1bcb6bb8f245d5b848e732eb5b55383"
+          }
+        },
+        {
+          "client_id": "943138649397-tkooug0gpufknklmgu3sc4ag9tegf3oa.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.icofound",
+            "certificate_hash": "99520798893572489acd3b32832aed89cd7b646d"
+          }
+        },
+        {
+          "client_id": "943138649397-u87fa4skpltac946bv2469nd5gt28lvo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.icofound",
+            "certificate_hash": "4cca2d753269ba5d90f276519a60918442d9e92e"
+          }
+        },
+        {
+          "client_id": "943138649397-3v3vippd3qfseah8q6spjld4j68bobem.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDaXHBYeD84YtLXWDt57yjPBu6kHc9SGlY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "943138649397-3v3vippd3qfseah8q6spjld4j68bobem.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "943138649397-04vugrmldd544tidtqi715aspr7uhdda.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.artha.icofound"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

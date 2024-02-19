@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home"
+        android:title="Business Profile" />
+    <item
+        android:id="@+id/network"
+        android:title="My network"
+        android:icon="@drawable/groupblue"/>
+    <item
+        android:id="@+id/stories"
+        android:title="Stories"
+        android:icon="@drawable/page"/>
+    <item
+        android:id="@+id/currentprofile"
+        android:title="Profile" />
+</menu>

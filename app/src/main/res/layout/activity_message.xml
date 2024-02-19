@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.MessageActivity">
+
+    <LinearLayout
+        android:id="@+id/linear_chat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/actionbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="start"
+                android:src="@drawable/back" />
+
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/back"
+                android:layout_weight="1"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/chatFrame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:clickable="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="50dp"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:weightSum="5">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/chat_recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:orientation="vertical"
+                android:overScrollMode="never"
+                tools:listitem="@layout/conversation_list_item" />
+
+        </LinearLayout>
+
+
+        <com.nambimobile.widgets.efab.ExpandableFabLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_gravity="bottom">
+
+            <com.nambimobile.widgets.efab.ExpandableFab
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="bottom|start"
+                android:layout_margin="10dp"
+                android:background="@color/white"
+                app:efab_closingAnimationDurationMs="300"
+                app:efab_color="@color/purple"
+                app:efab_fabOptionSize="custom"
+                app:efab_firstFabOptionMarginPx="65"
+                app:efab_icon="@drawable/add"
+                app:efab_iconAnimationRotationDeg="45"
+                app:efab_openingAnimationDurationMs="300"
+                app:efab_orientation="portrait"
+                app:efab_size="custom"
+                app:efab_successiveFabOptionMarginPx="40"
+                app:fabCustomSize="35dp"/>
+
+            <com.nambimobile.widgets.efab.FabOption
+                android:id="@+id/location"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="#8149FF"
+                app:fabCustomSize="35dp"
+                app:fabSize="auto"
+                app:fab_color="#8149FF"
+                app:fab_icon="@drawable/ic_baseline_location_on_24"
+                app:fab_orientation="portrait"
+                app:maxImageSize="17dp"/>
+
+            <com.nambimobile.widgets.efab.FabOption
+                android:id="@+id/camera"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="#8149FF"
+                app:fabCustomSize="35dp"
+                app:fabSize="auto"
+                app:fab_color="#8149FF"
+                app:fab_icon="@drawable/camera"
+                app:fab_orientation="portrait"
+                app:maxImageSize="17dp"/>
+
+            <com.nambimobile.widgets.efab.FabOption
+                android:id="@+id/photo"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:background="#8149FF"
+                app:fabCustomSize="35dp"
+                app:fabSize="auto"
+                app:fab_color="#8149FF"
+                app:fab_icon="@drawable/photo"
+                app:fab_orientation="portrait"
+                app:maxImageSize="15dp"/>
+
+        </com.nambimobile.widgets.efab.ExpandableFabLayout>
+
+        <EditText
+            android:id="@+id/typebox"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="60dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/forgot_edittext_bg"
+            android:drawablePadding="10dp"
+            android:hint="Type a Message"
+            android:paddingHorizontal="10dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            android:textSize="15dp" />
+
+        <View
+            android:id="@+id/slideText"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="bottom|end"
+            android:layout_marginStart="55dp"
+            android:layout_marginEnd="85dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/gray"
+            android:textColor="@color/black"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/btnSend"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="bottom|right"
+            android:layout_margin="10dp"
+            android:src="@drawable/send" />
+
+
+    </FrameLayout>
+
+
+</LinearLayout>
